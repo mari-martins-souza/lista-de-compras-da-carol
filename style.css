@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  
+  body {
+    background-color: #747DFF;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    body {
+      background-color: white;
+    }
+  }
+  
+  #container-geral {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 20px;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    #container-geral {
+      width: 100vw;
+      margin: 0px;
+      margin-top: 75px;
+      border-radius: 0%;
+    }
+  }
+  
+  @media only screen and (min-width: 1328px) {
+    #container-geral {
+      width: 40%;
+    }
+  }
+  
+  @media only screen and (min-width: 1700px) {
+    #container-geral {
+      width: 30%;
+    }
+  }
+  
+  h1 {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 900;
+    font-size: 4rem;
+    color: rgb(0, 0, 0);  
+    text-align: center;
+    line-height: 1;
+    padding-bottom: 10px;
+  }
+  
+  #adicionar-tarefa {
+    display: flex;
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+  
+  #nova-atividade {
+    background-color: #FF99FF;
+    border-radius: 20px;
+    /* border-style: none; */
+    border: 3px solid black;
+    width: 100%;
+    flex-grow: 1;
+    margin-right: 10px;
+    font-size: 1.5em;
+    padding: 15px;
+    }
+  
+    @media only screen and (max-width: 700px) {
+      #nova-atividade {
+        background-color: #747DFF;
+      }
+    }  
+  
+  #nova-atividade::placeholder {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    color: #f8cbf8;
+    font-size: 1em;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    #nova-atividade::placeholder {
+      color: #a7acfa;
+    }
+  } 
+  
+  #botao-nova-tarefa {
+    width: 200px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 900;
+    font-size: 1.5em;
+    color: #000000;
+    background-color: #DFF600;
+    border-radius: 20px;
+    text-align: center;
+    /* border-style: none; */
+    border: 3px solid black;
+    padding: 5px;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    #botao-nova-tarefa {
+      width: 150px;
+      line-height: 0.9;
+      padding: 2px;
+    }
+  } 
+  
+  #container-tarefas {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #lista-tarefas {
+    overflow-wrap: break-word;
+    width: 100%;
+  }
+  
+  li {
+    font-family: "DM Sans", sans-serif;
+    font-weight: light;
+    color:#000000;
+    font-size: 1.5rem;
+    list-style: none;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    padding-left: 10%;
+    padding-right: 10%;
+    background: #FF99FF;
+    margin-top: 3%;
+    border-radius: 20px;
+    position: relative;
+  }
+  
+  @media only screen and (max-width: 450px) {
+    li {
+      padding-left: 15%;
+      padding-right: 15%;
+    }
+  } 
+  
+  @media only screen and (min-width: 700px) {
+    li {
+      padding-left: 15%;
+      padding-right: 15%;
+    }
+  } 
+  
+  .checkbox {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%) scale(2);
+  }
+  
+  @media only screen and (max-width: 1061px) {
+    .checkbox {
+      transform: translateY(-50%) scale(1.8);
+    }
+  } 
+  
+  @media only screen and (max-width: 400px) {
+    .checkbox {
+      transform: translateY(-50%) scale(1.7);
+    }
+  } 
+  
+  .icone-lixeira {
+    cursor: pointer;
+    width: 26px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  #contador-texto {
+    font-size: 1.6em;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 1000;
+    color: rgb(0, 0, 0);
+    text-align: center;
+  }
