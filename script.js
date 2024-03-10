@@ -27,7 +27,7 @@ botaoNovaTarefa.addEventListener("click",  function() {
         li.appendChild(iconeLixeira);
       
         iconeLixeira.addEventListener("click", function() {
-            let confirmacao = confirm("Essa ação não pode ser desfeita, tem certeza?");
+            let confirmacao = confirm("Tem certeza Carolidine? Excluiu, morreu, não tem volta");
             if (confirmacao) {
                 this.parentElement.remove()   
                 atualizarContador();  
@@ -100,7 +100,7 @@ function carregarTarefasLocalStorage() {
             }
 
             iconeLixeira.addEventListener("click", function() {
-                let confirmacao = confirm("Essa ação não pode ser desfeita, tem certeza?");
+                let confirmacao = confirm("Tem certeza Carolidine? Excluiu, morreu, não tem volta");
                 if (confirmacao) {
                     this.parentElement.remove();
                     atualizarContador();
@@ -136,3 +136,19 @@ function atualizarContador() {
     let listaTarefas = document.getElementById("lista-tarefas");
     contador.innerText = "quantidade de itens: " + listaTarefas.children.length;
 };
+
+// Obter o pop-up
+var popup = document.getElementById("popup");
+
+// Obter o botão de fechar
+var closeBtn = document.getElementById("close-btn");
+
+// Mostrar o pop-up após x segundos
+setTimeout(function() {
+  popup.style.display = "block";
+}, 3000);
+
+// Quando o usuário clicar no botão de fechar, fechar o pop-up
+closeBtn.onclick = function() {
+  popup.style.display = "none";
+}

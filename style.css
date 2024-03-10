@@ -32,7 +32,7 @@
     #container-geral {
       width: 100vw;
       margin: 0px;
-      margin-top: 75px;
+      margin-top: 35px;
       border-radius: 0%;
     }
   }
@@ -97,10 +97,10 @@
   } 
   
   #botao-nova-tarefa {
-    width: 200px;
+    width: 100px;
     font-family: "DM Sans", sans-serif;
     font-weight: 900;
-    font-size: 1.5em;
+    font-size: 3em;
     color: #000000;
     background-color: #DFF600;
     border-radius: 20px;
@@ -112,7 +112,6 @@
   
   @media only screen and (max-width: 700px) {
     #botao-nova-tarefa {
-      width: 150px;
       line-height: 0.9;
       padding: 2px;
     }
@@ -192,4 +191,43 @@
     font-weight: 1000;
     color: rgb(0, 0, 0);
     text-align: center;
+  }
+
+/* pop-up */
+
+#popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+
+  /* Estilo do conteúdo do pop-up */
+  #popup-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+
+  /* Fechar botão */
+  #close-btn {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 45px;
+    color: red;
+    font-size: 50px;
+    font-weight: bold;
+  }
+
+  #close-btn:hover,
+  #close-btn:focus {
+    text-decoration: none;
+    cursor: pointer;
   }
