@@ -17,16 +17,16 @@ botaoNovaTarefa.addEventListener("click",  function() {
         let checkbox = document.createElement("input");
         checkbox.type = "checkbox";
         let li = document.createElement("li");
-        let iconeLixeira = document.createElement("img");
-        iconeLixeira.src = "img/excluir2.png"
+        let botaoExcluir = document.createElement("img");
+        botaoExcluir.src = "img/simbolo-x.png"
         let span = document.createElement("span");
         
         span.appendChild(document.createTextNode(novaAtividade.value));
         li.appendChild(checkbox);
         li.appendChild(span);
-        li.appendChild(iconeLixeira);
+        li.appendChild(botaoExcluir);
       
-        iconeLixeira.addEventListener("click", function() {
+        botaoExcluir.addEventListener("click", function() {
             let confirmacao = confirm("Tem certeza Carolidine? Excluiu, morreu, não tem volta");
             if (confirmacao) {
                 this.parentElement.remove()   
@@ -50,7 +50,7 @@ botaoNovaTarefa.addEventListener("click",  function() {
         atualizarContador();
         alterarPlaceholder();
 
-        iconeLixeira.className ="icone-lixeira";
+        botaoExcluir.className ="botao-excluir";
         checkbox.className = "checkbox";
 
         salvarTarefasLocalStorage();
@@ -84,14 +84,14 @@ function carregarTarefasLocalStorage() {
             checkbox.type = "checkbox";
             checkbox.checked = tarefas[i].tarefaConcluida;
             let li = document.createElement("li");
-            let iconeLixeira = document.createElement("img");
-            iconeLixeira.src = "img/excluir2.png"
+            let botaoExcluir = document.createElement("img");
+            botaoExcluir.src = "img/simbolo-x.png"
             let span = document.createElement("span");
 
             span.appendChild(document.createTextNode(tarefas[i].nomeDaTarefa));
             li.appendChild(checkbox);
             li.appendChild(span);
-            li.appendChild(iconeLixeira);
+            li.appendChild(botaoExcluir);
 
             if(checkbox.checked) {
                 span.style.textDecoration = "line-through";
@@ -99,7 +99,7 @@ function carregarTarefasLocalStorage() {
                 span.style.textDecoration = "none";
             }
 
-            iconeLixeira.addEventListener("click", function() {
+            botaoExcluir.addEventListener("click", function() {
                 let confirmacao = confirm("Tem certeza Carolidine? Excluiu, morreu, não tem volta");
                 if (confirmacao) {
                     this.parentElement.remove();
@@ -120,7 +120,7 @@ function carregarTarefasLocalStorage() {
 
             listaTarefas.appendChild(li);
             
-            iconeLixeira.className ="icone-lixeira";
+            botaoExcluir.className ="botao-excluir";
             checkbox.className = "checkbox";
         }
     }
@@ -130,25 +130,8 @@ function carregarTarefasLocalStorage() {
 
 window.onload = carregarTarefasLocalStorage;
 
-
 function atualizarContador() {
     let contador = document.getElementById("contador-texto");
     let listaTarefas = document.getElementById("lista-tarefas");
     contador.innerText = "quantidade de itens: " + listaTarefas.children.length;
 };
-
-// Obter o pop-up
-var popup = document.getElementById("popup");
-
-// Obter o botão de fechar
-var closeBtn = document.getElementById("close-btn");
-
-// Mostrar o pop-up após x segundos
-setTimeout(function() {
-  popup.style.display = "block";
-}, 3000);
-
-// Quando o usuário clicar no botão de fechar, fechar o pop-up
-closeBtn.onclick = function() {
-  popup.style.display = "none";
-}

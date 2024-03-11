@@ -6,17 +6,17 @@
   }
   
   body {
-    background-color: #747DFF;
+    background-color: #5E4BA6;
   }
   
   @media only screen and (max-width: 700px) {
     body {
-      background-color: white;
+      background-color: #B5B3F2;
     }
   }
   
   #container-geral {
-    background-color: white;
+    background-color: #B5B3F2;
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -53,7 +53,7 @@
     font-family: "DM Sans", sans-serif;
     font-weight: 900;
     font-size: 4rem;
-    color: rgb(0, 0, 0);  
+    color: #ffffff;  
     text-align: center;
     line-height: 1;
     padding-bottom: 10px;
@@ -66,16 +66,21 @@
   }
   
   #nova-atividade {
-    background-color: #FF99FF;
+    background-color: #F2CA50;
+    color: white;
     border-radius: 20px;
-    /* border-style: none; */
-    border: 3px solid black;
+    border-style: none;
+    /* border: 3px solid black; */
     width: 100%;
     flex-grow: 1;
     margin-right: 10px;
     font-size: 1.5em;
     padding: 15px;
     }
+
+  #nova-atividade:focus {
+    outline: none;
+  }  
   
     @media only screen and (max-width: 700px) {
       #nova-atividade {
@@ -86,7 +91,7 @@
   #nova-atividade::placeholder {
     font-family: "DM Sans", sans-serif;
     font-weight: 400;
-    color: #f8cbf8;
+    color: #7075b4;
     font-size: 1em;
   }
   
@@ -101,12 +106,12 @@
     font-family: "DM Sans", sans-serif;
     font-weight: 900;
     font-size: 3em;
-    color: #000000;
-    background-color: #DFF600;
+    color: #7075b4;
+    background-color: #F2A950;
     border-radius: 20px;
     text-align: center;
-    /* border-style: none; */
-    border: 3px solid black;
+    border-style: none;
+    /* border: 3px solid black; */
     padding: 5px;
   }
   
@@ -130,14 +135,14 @@
   li {
     font-family: "DM Sans", sans-serif;
     font-weight: light;
-    color:#000000;
+    color:#7075b4;
     font-size: 1.5rem;
     list-style: none;
     padding-top: 2%;
     padding-bottom: 3%;
     padding-left: 10%;
     padding-right: 10%;
-    background: #FF99FF;
+    background: #ffffff;
     margin-top: 3%;
     border-radius: 20px;
     position: relative;
@@ -159,10 +164,40 @@
   
   .checkbox {
     position: absolute;
-    left: 15px;
+    left: 20px;
     top: 50%;
     transform: translateY(-50%) scale(2);
   }
+
+  /* .checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%) scale(2);
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 1px solid #000;
+  }
+
+  .checkbox:checked {
+    background-color: #5E4BA6;
+  }
+
+  .checkbox:checked:after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } */
   
   @media only screen and (max-width: 1061px) {
     .checkbox {
@@ -176,11 +211,11 @@
     }
   } 
   
-  .icone-lixeira {
+  .botao-excluir {
     cursor: pointer;
-    width: 26px;
+    width: 18px;
     position: absolute;
-    right: 10px;
+    right: 15px;
     top: 50%;
     transform: translateY(-50%);
   }
@@ -189,62 +224,6 @@
     font-size: 1.6em;
     font-family: "DM Sans", sans-serif;
     font-weight: 1000;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-align: center;
-  }
-
-/* pop-up */
-
-#popup {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
-  }
-
-  /* Estilo do conteúdo do pop-up */
-  #popup-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    border: 10px solid #FF99FF;
-    position: relative;
-  }
-
-  /* Fechar botão */
-  #close-btn {
-    /* margin-left: 45px;
-    color: black;
-    font-size: 50px;
-    font-weight:bolder;
-    position: absolute;
-    top: 100px;
-    left: 15px;
-    z-index: 999; */
-
-    color: rgb(0, 0, 0);
-    position: absolute;
-    top: 50px;
-    right: 40px;
-    font-size: 15px;
-    transform: scale(2);
-    font-weight: bold;
-    background: #FF99FF;
-    padding: 2px 6px;
-    border-radius: 50%;
-  }
-
-  
-
-  #close-btn:hover,
-  #close-btn:focus {
-    text-decoration: none;
-    cursor: pointer;
   }
